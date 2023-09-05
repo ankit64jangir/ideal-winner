@@ -1,3 +1,4 @@
+import CreatePost from "@/components/Post/CreatePost";
 import PostCard from "@/components/Post/PostCard";
 import { POST_DATA } from "@/utils/constants";
 import React from "react";
@@ -11,7 +12,7 @@ function home() {
           How are you doing today? Would you like to share something with the
           community 🤗
         </p>
-
+        <CreatePost />
         <div className="mt-4">
           {POST_DATA.map((post, index) => {
             return (

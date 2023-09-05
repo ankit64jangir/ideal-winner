@@ -23,7 +23,7 @@ function PostCard({
 }: PostCardTypes) {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="w-full bg-[#35373B] border-2 border-gray-700 rounded-lg p-6">
+      <div className="w-full bg-[#35373B] border-2 border-[#27292D] rounded-lg p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Image
