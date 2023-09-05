@@ -1,4 +1,4 @@
-import { CommentIcon, MenuIcon } from "@/icons";
+import { CommentIcon, MenuIcon } from "@/utils/icons";
 import Image from "next/image";
 import React from "react";
 

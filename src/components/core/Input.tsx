@@ -1,4 +1,4 @@
-import { CrossEyeIcon, EyeIcon } from "@/icons";
+import { CrossEyeIcon, EyeIcon } from "@/utils/icons";
 import React, { useState } from "react";
 
 type InputProps = {
