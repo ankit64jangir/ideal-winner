@@ -1,7 +1,9 @@
 import Button from "@/components/core/Button";
 import Input from "@/components/core/Input";
+import { useRouter } from "next/router";
 
 const Home = () => {
+  const router = useRouter();
   return (
     <div className="bg-primaryBG flex items-center flex-col w-screen h-screen">
       <div className="bg-gradient-to-r from-[#969696] to-[#343434] w-[463px] h-[420px] p-[2px] rounded-lg">
@@ -19,7 +21,13 @@ const Home = () => {
             rightText="Forgot password?"
             type="password"
           />
-          <Button text="Login now" onClick={() => {}} className="mt-2" />
+          <Button
+            text="Login now"
+            onClick={() => {
+              router.push("/home", undefined, { shallow: true });
+            }}
+            className="mt-2"
+          />
           <p className="mt-2 self-start text-[#7F8084] text-sm cursor-pointer">
             Not registered yet?{" "}
             <span className="text-[#C5C7CA] font-bold">Register →</span>

@@ -1,3 +1,8 @@
+type IconProps = {
+  size?: number;
+  color?: string;
+};
+
 export const EyeIcon = () => {
   return (
     <svg
@@ -36,6 +41,39 @@ export const CrossEyeIcon = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"
+      />
+    </svg>
+  );
+};
+
+export const MenuIcon = ({ color, size }: IconProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke={color}
+      width={size}
+      height={size}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+      />
+    </svg>
+  );
+};
+
+export const CommentIcon = ({ color, size }: IconProps) => {
+  return (
+    <svg width={20} height={20} viewBox="0 0 20 20">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M17.333 3.833H2.667a1.5 1.5 0 0 0-1.5 1.5v8a1.5 1.5 0 0 0 1.5 1.5H10a.5.5 0 0 1 .354.147l3.146 3.146v-2.793a.5.5 0 0 1 .5-.5h3.333a1.5 1.5 0 0 0 1.5-1.5v-8a1.5 1.5 0 0 0-1.5-1.5Zm-14.666-1h14.666a2.5 2.5 0 0 1 2.5 2.5v8a2.5 2.5 0 0 1-2.5 2.5H14.5v3.5a.5.5 0 0 1-.854.354l-3.853-3.854H2.667a2.5 2.5 0 0 1-2.5-2.5v-8a2.5 2.5 0 0 1 2.5-2.5Z"
+        fill="#C5C7CA"
       />
     </svg>
   );
