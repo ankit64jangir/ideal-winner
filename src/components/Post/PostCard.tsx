@@ -60,7 +60,7 @@ function PostCard({
           <MenuIcon color="white" size={26} />
         </div>
 
-        <div className="bg-[#191920] h-40 flex items-center rounded-lg mt-4">
+        <div className="bg-[#191920] py-4 flex items-center rounded-lg mt-4">
           <div className="w-16 h-16 bg-[#27292D] text-2xl rounded-full flex items-center justify-center m-4">
             {emoji}
           </div>

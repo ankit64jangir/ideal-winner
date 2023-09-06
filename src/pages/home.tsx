@@ -5,7 +5,7 @@ import { POST_DATA } from "@/utils/constants";
 
 const Home = () => {
   return (
-    <div className="w-full flex justify-center flex-col items-center pt-20 bg-primaryBG">
+    <div className="w-full flex justify-center flex-col items-center pt-20 bg-primaryBG px-4">
       <div className="max-w-4xl w-full">
         <h1 className="text-[#C5C7CA] text-[28px]">Hello Jane</h1>
         <p className="text-[#7F8084] text-base">

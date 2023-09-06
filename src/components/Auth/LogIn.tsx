@@ -15,7 +15,7 @@ function Login({ updateAuth }: LoginProps) {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#969696] to-[#343434] w-[463px] h-[420px] p-[2px] rounded-lg">
+    <div className="bg-gradient-to-r from-[#969696] to-[#343434] w-[330px] md:w-[463px] h-[420px] p-[2px] rounded-lg">
       <div className="bg-[#27292D] h-full w-full flex flex-col justify-center items-center px-5 rounded-lg">
         <div className="flex flex-col items-center mb-7">
           <span className="text-sm text-[#6B6C70]">WELCOME BACK</span>
