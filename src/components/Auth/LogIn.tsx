@@ -1,10 +1,19 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { AuthType } from ".";
 import Button from "../core/Button";
 import Input from "../core/Input";
 
-function Login() {
+type LoginProps = {
+  updateAuth: (newAuth: AuthType) => void;
+};
+
+function Login({ updateAuth }: LoginProps) {
   const router = useRouter();
+  const handleRegisterClick = () => {
+    updateAuth("signup");
+  };
+
   return (
     <div className="bg-gradient-to-r from-[#969696] to-[#343434] w-[463px] h-[420px] p-[2px] rounded-lg">
       <div className="bg-[#27292D] h-full w-full flex flex-col justify-center items-center px-5 rounded-lg">
@@ -28,7 +37,10 @@ function Login() {
           }}
           className="mt-2"
         />
-        <p className="mt-2 self-start text-[#7F8084] text-sm cursor-pointer">
+        <p
+          className="mt-2 self-start text-[#7F8084] text-sm cursor-pointer"
+          onClick={handleRegisterClick}
+        >
           Not registered yet?{" "}
           <span className="text-[#C5C7CA] font-bold">Register →</span>
         </p>

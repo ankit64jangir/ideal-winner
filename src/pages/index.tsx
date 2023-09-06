@@ -1,4 +1,4 @@
-import LogIn from "@/components/Auth/LogIn";
+import Auth from "@/components/Auth";
 import { Logo } from "@/utils/icons";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
       <div className="mb-8">
         <Logo />
       </div>
-      <LogIn />
+      <Auth />
     </div>
   );
 };

@@ -1,9 +1,9 @@
+import React from "react";
 import CreatePost from "@/components/Post/CreatePost";
 import PostCard from "@/components/Post/PostCard";
 import { POST_DATA } from "@/utils/constants";
-import React from "react";
 
-function home() {
+const Home = () => {
   return (
     <div className="w-full flex justify-center flex-col items-center pt-20 bg-primaryBG">
       <div className="max-w-4xl w-full">
@@ -33,6 +33,6 @@ function home() {
       </div>
     </div>
   );
-}
+};
 
-export default home;
+export default Home;
