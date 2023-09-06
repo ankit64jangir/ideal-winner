@@ -4,8 +4,8 @@ import SignUp from "./SignUp";
 
 export type AuthType = "login" | "signup";
 
-function Auth() {
-  const [auth, setAuth] = useState<AuthType>("login");
+function Auth({ initialAuth = "login" }: { initialAuth?: AuthType }) {
+  const [auth, setAuth] = useState<AuthType>(initialAuth);
 
   const updateAuth = (newAuth: AuthType) => {
     setAuth(newAuth);

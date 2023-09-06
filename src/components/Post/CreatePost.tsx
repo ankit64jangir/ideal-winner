@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import Auth from "../Auth";
 import Button from "../core/Button";
+import Modal from "../core/Modal";
 
 const CreatePost = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const openModal = () => {
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <div className="flex justify-center items-center mt-14">
       <div className="w-full p-6 rounded-lg border border-[#27292D] bg-[#35373B]">
@@ -20,8 +32,11 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-4 flex justify-end items-end w-full">
-          <Button onClick={() => {}} text="Post" className="w-32" />
+          <Button onClick={openModal} text="Post" className="w-32" />
         </div>
+        <Modal isOpen={modalVisible} onClose={closeModal}>
+          <Auth initialAuth="signup" />
+        </Modal>
       </div>
     </div>
   );

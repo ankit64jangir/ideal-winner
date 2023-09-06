@@ -1,6 +1,8 @@
 import { CommentIcon, MenuIcon } from "@/utils/icons";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Auth from "../Auth";
+import Modal from "../core/Modal";
 
 type PostCardTypes = {
   name: string;
@@ -21,8 +23,20 @@ function PostCard({
   postTime,
   isEdited,
 }: PostCardTypes) {
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const openModal = () => {
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+  };
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div
+      className="flex flex-col items-center justify-center cursor-pointer"
+      onClick={openModal}
+    >
       <div className="w-full bg-[#35373B] border-2 border-[#27292D] rounded-lg p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -58,6 +72,9 @@ function PostCard({
           <p className="text-gray-400 text-base ml-2">{`${comments} comments`}</p>
         </div>
       </div>
+      <Modal isOpen={modalVisible} onClose={closeModal}>
+        <Auth initialAuth="signup" />
+      </Modal>
     </div>
   );
 }
