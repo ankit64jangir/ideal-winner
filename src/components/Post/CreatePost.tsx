@@ -32,7 +32,7 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-4 flex justify-end items-end w-full">
-          <Button onClick={openModal} text="Post" className="w-32" />
+          <Button onClick={openModal} text="Post" width="150px" />
         </div>
         <Modal isOpen={modalVisible} onClose={closeModal}>
           <Auth initialAuth="signup" />
